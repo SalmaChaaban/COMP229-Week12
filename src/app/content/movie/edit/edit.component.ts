@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
+import { MovieService } from 'src/app/services/movie.service';
 
 @Component({
   selector: 'app-edit',
@@ -31,7 +33,7 @@ export class MovieEditComponent implements OnInit {
         this.form._id = params['id']
 
         this.movieService.getMovie(this.form._id)
-        .subscrive({
+        .subscribe({
           next: data => {
             this.form = data.movie;
           },
