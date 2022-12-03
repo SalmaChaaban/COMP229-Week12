@@ -16,7 +16,7 @@ export class MovieAddComponent implements OnInit {
   }
 
   isSuccessfull = true;
-  errirMessage = "";
+  errorMessage = "";
 
   constructor(private movieService: MovieService, private router: Router) { }
 
